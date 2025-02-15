@@ -100,7 +100,7 @@ class DefaultExtension extends MProvider {
 		const chapterRes = await client.post(`${url}/api/chapterlist.php`,{
 			"Content-Type":"multipart/form-data"
 		}, {
-			aid : imageUrl.match(/[0-9]+s.jpg/, "")[0].repalce("s.jpg". ""),
+			aid : imageUrl.match(/[0-9]+s.jpg/, "")[0].repalce("s.jpg", ""),
 		});
 		const chapterDoc = new Document(chapterRes.body);
 
